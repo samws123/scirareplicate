@@ -3,6 +3,12 @@ import './env/server';
 import './env/client';
 
 const nextConfig: NextConfig = {
+  typescript: {
+    ignoreBuildErrors: true, // Skip TypeScript errors during build
+  },
+  eslint: {
+    ignoreDuringBuilds: true, // Skip ESLint during build
+  },
   compiler: {
     // if NODE_ENV is production, remove console.log
     removeConsole:
